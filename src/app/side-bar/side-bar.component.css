@@ -1,0 +1,33 @@
+.left-navigation{
+    width:250px;
+    height:250px;
+    text-align: center;
+    margin-top:-16px;
+    float:left;
+    padding-top: 30px;
+    position: fixed;
+    z-index: 3;
+    font-size: 16px;
+}
+.list {
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 60px;
+}
+li {
+    background:none;
+    height:50px;
+    font-family: Trebuchet MS;
+}
+
+.list>li:hover {
+    box-shadow:1px 1px 10px 1px #50e6df inset;
+    transition: padding-top 0.5s linear;
+    padding-top: 10px;
+}
+a{
+    color:white;
+    text-decoration: none;
+    float:left;
+    margin-left:60px;
+}

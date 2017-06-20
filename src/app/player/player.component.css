@@ -1,0 +1,17 @@
+.hide{
+    display: none;
+}
+button{
+    background: transparent;
+    border:none !important;
+    color: #ffffff;
+}
+.btn-default:hover, .btn-default:focus, .open>.dropdown-toggle.btn-default {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #000000; 
+}
+
+.col-md-2 {
+    margin-left: 22px;
+}

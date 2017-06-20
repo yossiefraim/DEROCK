@@ -1,0 +1,59 @@
+<head><link rel="shortcut icon" href="play list icon.png" type="image/x-icon"></head>
+    <div id="wrapper">
+        <div id="custom-search-input" class="input-group col-md-2">           
+            <input type="text" class="  search-query form-control" placeholder="Search" />
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">
+                        <span class=" glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+
+        <app-side-bar></app-side-bar>
+
+        <main id="favorites">
+        <h2 class="_header"><span class="glyphicon glyphicon-ok"></span>Favorites</h2>
+            <div class="space"></div>
+            <section *ngFor="let song of user.userFavoriteSongs">
+                <li id="favorites_img">
+                    <img src='./assets/{{song.result[0].genre}}.png'>
+                </li>
+                <li id="favorites_play">
+                   <span> {{song.result[0].songName}}</span><br>
+                    <span>{{song.result[0].ArtistName}}</span><br>
+                </li>
+                <li id="favorites_play">
+                    <app-player [_id]=song.result[0].youtubeId></app-player>
+                </li>
+            </section>
+        </main>
+
+        <main id="playlist">
+            <h2 class="_header"><span class="glyphicon glyphicon-play"></span>Playlist</h2>
+            <div class="space"></div>
+                <section *ngFor="let playlist of user.userPlaylist">
+                    <li id="playlist_img">
+                        <img src='./assets/{{playlist.genre}}.png'>
+                        <span id="likes" class="glyphicon glyphicon-heart" aria-hidden="true">{{playlist.likes}}</span>
+                    </li>
+                    <li id="playlist_play">
+                        <span>{{playlist.PlayListName}}</span>
+                    </li>
+            </section>
+        </main>
+
+        <main id="albums">
+            <h2 class="_header"><span class="glyphicon glyphicon-indent-left"></span>Albumes</h2>
+            <div class="space"></div>
+            <section *ngFor="let album of user.userFavoriteAlbums">
+                <li id="albums_img">
+                    <img src='./assets/{{album.result[0].albumName}}.png'>
+                </li>
+                <li id="albums_play">
+                    <span>{{album.result[0].albumName}}</span><br>
+                    <span>{{album.result[0].ArtistName}}</span>
+                </li>
+            </section>
+        </main>
+        <div class="clear"></div>
+    </div>

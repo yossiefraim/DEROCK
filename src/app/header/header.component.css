@@ -1,0 +1,27 @@
+.header{
+    height:65px;
+    width:100%;
+    background-color:#000000;
+
+}
+h2.logo{
+        color:#ffffff;
+        float:left;
+        margin-left:50px;
+        margin-top:18px;
+        font-family:Impact;
+        font-size:32px;
+}
+
+a{
+    color:#ffffff;
+    margin-right:25px;
+    float:right;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    margin-top:25px;
+    padding-left:30px;
+}
+a:hover{
+    color:#cccccc;
+}
