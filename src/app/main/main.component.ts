@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicService } from '../music-service/music-service.service';
 import { User } from '../schemes/user';
+import { Song } from '../schemes/song';
 
 @Component({
   selector: 'app-main',
@@ -12,10 +13,12 @@ export class MainComponent implements OnInit {
 
   constructor(private musicService : MusicService) { }
   user:User;
+  songs:Song;
   id:object = {"id":1};
   ngOnInit() {
 
       this.getUser();
+     
   }
     getUser(){
     this.musicService
@@ -24,5 +27,8 @@ export class MainComponent implements OnInit {
           this.user=user;
       });      
   }
+ 
+
+
 
 }

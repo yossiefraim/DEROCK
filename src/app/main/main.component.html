@@ -1,3 +1,4 @@
+<app-header></app-header>
 <head><link rel="shortcut icon" href="play list icon.png" type="image/x-icon"></head>
     <div id="wrapper">
         <div id="custom-search-input" class="input-group col-md-2">           
@@ -23,7 +24,8 @@
                     <span>{{song.result[0].ArtistName}}</span><br>
                 </li>
                 <li id="favorites_play">
-                    <app-player [_id]=song.result[0].youtubeId></app-player>
+                    <app-player [_id]=song.result[0].youtubeId
+                                [songId]=song.result[0].id></app-player>
                 </li>
             </section>
         </main>
@@ -31,6 +33,7 @@
         <main id="playlist">
             <h2 class="_header"><span class="glyphicon glyphicon-play"></span>Playlist</h2>
             <div class="space"></div>
+                
                 <section *ngFor="let playlist of user.userPlaylist">
                     <li id="playlist_img">
                         <img src='./assets/{{playlist.genre}}.png'>
@@ -39,9 +42,8 @@
                     <li id="playlist_play">
                         <span>{{playlist.PlayListName}}</span>
                     </li>
-            </section>
+                </section>
         </main>
-
         <main id="albums">
             <h2 class="_header"><span class="glyphicon glyphicon-indent-left"></span>Albumes</h2>
             <div class="space"></div>
@@ -55,5 +57,35 @@
                 </li>
             </section>
         </main>
+        <main id="favorites">
+        <h2 class="_header"><span class="glyphicon glyphicon-ok"></span>Recomended Songs</h2>
+            <div class="space"></div>
+            <section *ngFor="let song of user.userRecomendedSongs">
+                <li id="favorites_img">
+                    <img src='./assets/{{song.genre}}.png'>
+                </li>
+                <li id="favorites_play">
+                   <span> {{song.songName}}</span><br>
+                    <span>{{song.ArtistName}}</span><br>
+                </li>
+                <li id="favorites_play">
+                    <app-player [_id]=song.youtubeId></app-player>
+                </li>
+            </section>
+        </main>        
+        <main id="albums">
+            <h2 class="_header"><span class="glyphicon glyphicon-indent-left"></span>Recomended Albums</h2>
+            <div class="space"></div>
+            <section *ngFor="let album of user.userRecomendedAlbums">
+                <li id="albums_img">
+                    <img src='./assets/{{album.albumName}}.png'>
+                </li>
+                <li id="albums_play">
+                    <span>{{album.albumName}}</span><br>
+                    <span>{{album.ArtistName}}</span>
+                </li>
+            </section>
+        </main>
         <div class="clear"></div>
     </div>
+    <app-footer></app-footer>

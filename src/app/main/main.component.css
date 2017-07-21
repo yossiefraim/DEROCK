@@ -7,12 +7,12 @@
     position: absolute;
 }
 main{
-    width:1080px;
+    width:80%;
     height:100%;
     float:left;
     margin-left: 15%;
-    margin-right:170px;
-    margin-top:10px;
+/*    margin-right:170px;
+*/    margin-top:10px;
     position: relative;
 }
 .space{
@@ -41,8 +41,8 @@ section{
     background-color: rgba(255, 255, 255, 0.5) ;
    font-family:Times;
 }
-/--------------- FAVORITES SECTIONS -----------------/
-#favorites section{
+/*/--------------- FAVORITES SECTIONS -----------------/
+*/#favorites section{
     width:190px;
     height:190px;
 }
@@ -73,8 +73,8 @@ li#favorites_play span{
     margin-left: 10px; 
 }
 
-/--------------- PLAYLIST SECTIONS -----------------/
-#playlist{
+/*/--------------- PLAYLIST SECTIONS -----------------/
+*/#playlist{
     height: 300px;
 }
 #playlist section{
@@ -118,15 +118,13 @@ li#playlist_play span{
     margin-top: 33px; 
 }
 
-/--------------- ALBUMS SECTIONS -----------------/
-#albums section{
+/*/--------------- ALBUMS SECTIONS -----------------/
+*/#albums section{
     width:250px;
     height: 250px;
     color: #ffffff;
 }
-#albums{
-    height: 800px;
-}
+
 li#albums_img{
     width:250px;
     height: 200px;
@@ -150,8 +148,8 @@ li#albums_play span{
     font-size: 17px;
     margin-left: 10px; 
 }
-/--------------- SEARCH SECTIONS -----------------/
-#custom-search-input {
+/*/--------------- SEARCH SECTIONS -----------------/
+*/#custom-search-input {
    margin:0;
    margin-top: 20px;
    padding: 0;
