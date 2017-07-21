@@ -21,6 +21,42 @@ export class MusicService {
                  .catch(this.handleError);
 
   }
+  getAllSongs():Promise<Song>{
+      return this.http.get(this.userUrl+'songs')
+                 .toPromise()
+                 .then((response )=>{
+                   return response.json() as Song
+                 } )
+                 .catch(this.handleError);
+
+  }
+  getAllAlbums():Promise<Album>{
+      return this.http.get(this.userUrl+'albums')
+                 .toPromise()
+                 .then((response )=>{
+                   return response.json() as Album
+                 } )
+                 .catch(this.handleError);
+
+  }
+   addSong(addParams):Promise<any>{
+      return this.http.post(this.userUrl+'addSongs',addParams)
+                 .toPromise()
+                 .then((response )=>{
+                   return response.json() as any
+                 } )
+                 .catch(this.handleError);
+
+  }
+   removeSongs(removeParams):Promise<any>{
+      return this.http.post(this.userUrl+'removeSongs',removeParams)
+                 .toPromise()
+                 .then((response )=>{
+                   return response.json() as any
+                 } )
+                 .catch(this.handleError);
+
+  }
 
     private handleError (error: any) {
       let errMsg = (error.message) ? error.message :
