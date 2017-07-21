@@ -1,4 +1,3 @@
-    <div class="container">
         <div>
           <youtube-player class="hide" 
             [videoId]="_id" 
@@ -8,10 +7,12 @@
           </youtube-player>
         </div>
       
-      <div class="col-md-2">
+      <div class="col">
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-default" (click)="playVideo()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
           <button type="button" class="btn btn-default"  (click)="pauseVideo()"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button>
+          <button type="button" class="btn btn-default" (click)="removeSong()"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button>
+          <button type="button" class="btn btn-default" (click)="addSong()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+
         </div>
       </div>
-    </div>
