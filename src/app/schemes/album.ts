@@ -5,7 +5,9 @@ export class Album {
     id:number;
     albumName:string;
     ArtistName:string;
-    songs:[Song];
+    songs:[{
+        songId:number;
+    }];
     albumDateOfIssue:string;
     likes:number;
     favorite:boolean;
