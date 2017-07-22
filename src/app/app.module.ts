@@ -9,7 +9,6 @@ import { PlayerComponent } from './player/player.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
-import { MusicLineComponent } from './music-line/music-line.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { LoginComponent } from './login/login.component';
 import { SongsComponent } from './songs/songs.component';
@@ -22,7 +21,6 @@ import { AlbumsComponent } from './albums/albums.component';
     FooterComponent,
     HeaderComponent,
     MainComponent,
-    MusicLineComponent,
     SideBarComponent,
     LoginComponent,
     SongsComponent,
